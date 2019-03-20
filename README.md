@@ -70,7 +70,7 @@ kuha(condition) {
 
 ```
 toeminto sum(a, b) {
-    palaata a ynnättynä b;
+    pallaata a ynnättynä b;
 }
 ```
 
