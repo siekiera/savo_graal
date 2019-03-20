@@ -1,4 +1,4 @@
-function loop(n, obj, name) {
+toeminto loop(n, obj, name) {
   obj[name] = 0;  
   while (obj[name] < n) {  
     obj[name] = obj[name] + 1;  
@@ -6,11 +6,11 @@ function loop(n, obj, name) {
   return obj[name];
 }  
 
-function main() {
+toeminto piä() {
   i = 0;
   while (i < 20) {
     loop(1000, new(), "prop");
     i = i + 1;
   }
-  println(loop(1000, new(), "prop"));  
+  tulostappa(loop(1000, new(), "prop"));
 }  

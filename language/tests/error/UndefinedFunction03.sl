@@ -1,28 +1,28 @@
-function invoke(f) {
+toemintoinvoke(f) {
   f("hello");
 }
 
-function f1() {
-  println("f1");
+toemintof1() {
+  tulostappa("f1");
 }
 
-function f2() {
-  println("f2");
+toemintof2() {
+  tulostappa("f2");
 }
 
-function f3() {
-  println("f3");
+toemintof3() {
+  tulostappa("f3");
 }
 
-function f4() {
-  println("f4");
+toemintof4() {
+  tulostappa("f4");
 }
 
-function f5() {
-  println("f5");
+toemintof5() {
+  tulostappa("f5");
 }
 
-function main() {
+toeminto piä() {
   invoke(f1);
   invoke(f2);
   invoke(f3);

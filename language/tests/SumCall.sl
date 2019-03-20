@@ -18,5 +18,5 @@ toeminto main() {
     loop(10000);
     i = i + 1;
   }
-  println(loop(10000));  
+  tulostappa(loop(10000));
 }  

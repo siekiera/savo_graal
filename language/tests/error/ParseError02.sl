@@ -1,8 +1,8 @@
-function test(n) {
+toemintotest(n) {
   a = 1;
   if (a > 0) {
     b = 10;
-    println(b);
+    tulostappa(b);
   } else {
     b = 20;
     a = 0;
@@ -15,9 +15,9 @@ function test(n) {
       print(d);
     }
   }
-  println(b);
-  println(a);
+  tulostappa(b);
+  tulostappa(a);
 }
-function main() {
+toeminto piä() {
   test(\"n_n\");
 }

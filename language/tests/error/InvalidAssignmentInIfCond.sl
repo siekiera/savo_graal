@@ -1,8 +1,8 @@
-function double(x) {
+toeminto double(x) {
   return 2 * x;
 }
 
-function main() {
+toeminto piä() {
   if (double(2) = 4) {
     42;
   }

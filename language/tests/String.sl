@@ -1,25 +1,25 @@
-function null() {
+toeminto null() {
 }
 
-function foo() {
+toeminto foo() {
   return "bar";
 }
 
-function f(a, b) {
+toeminto f(a, b) {
   return a + " < " + b + ": " + (a < b);
 }
 
-function main() {  
-  println("s" + null());  
-  println("s" + null);  
-  println("s" + foo());  
-  println("s" + foo);
+toeminto piä() {
+  tulostappa("s" + null());
+  tulostappa("s" + null);
+  tulostappa("s" + foo());
+  tulostappa("s" + foo);
     
-  println(null() + "s");  
-  println(null() + "s");  
-  println(foo() + "s");  
-  println(foo + "s");
+  tulostappa(null() + "s");
+  tulostappa(null() + "s");
+  tulostappa(foo() + "s");
+  tulostappa(foo + "s");
 
-  println(f(2, 4));
-  println(f(2, "4"));
+  tulostappa(f(2, 4));
+  tulostappa(f(2, "4"));
 }  

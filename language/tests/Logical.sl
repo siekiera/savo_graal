@@ -1,23 +1,23 @@
-function main() {
+toeminto piä() {
   t = 10 == 10; // true
   f = 10 != 10; // false
-  println(left(f) && right(f));
-  println(left(f) && right(t));
-  println(left(t) && right(f));
-  println(left(t) && right(t));
-  println("");
-  println(left(f) || right(f));
-  println(left(f) || right(t));
-  println(left(t) || right(f));
-  println(left(t) || right(t));
+  tulostappa(left(f) && right(f));
+  tulostappa(left(f) && right(t));
+  tulostappa(left(t) && right(f));
+  tulostappa(left(t) && right(t));
+  tulostappa("");
+  tulostappa(left(f) || right(f));
+  tulostappa(left(f) || right(t));
+  tulostappa(left(t) || right(f));
+  tulostappa(left(t) || right(t));
 }
 
-function left(x) {
-  println("left");
+toeminto left(x) {
+  tulostappa("left");
   return x;
 }
 
-function right(x) {
-  println("right");
+toeminto right(x) {
+  tulostappa("right");
   return x;
 }

@@ -1,13 +1,13 @@
-function e(a, b) {
+toeminto e(a, b) {
   return a == b;
 }
 
-function main() {  
-  println(e(4, 4));  
-  println(e(3, "aaa"));  
-  println(e(4, 4));  
-  println(e("a", "a"));  
-  println(e(1==2, 1==2));  
-  println(e(1==2, 1));  
-  println(e(e, e));  
+toeminto piä() {
+  tulostappa(e(4, 4));
+  tulostappa(e(3, "aaa"));
+  tulostappa(e(4, 4));
+  tulostappa(e("a", "a"));
+  tulostappa(e(1==2, 1==2));
+  tulostappa(e(1==2, 1));
+  tulostappa(e(e, e));
 }  

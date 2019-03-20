@@ -1,4 +1,4 @@
-function main() {  
-  println("Hello World!");  
+toeminto piä() {
+  tulostappa("Hello World!");
   nanoTime();  
 }  

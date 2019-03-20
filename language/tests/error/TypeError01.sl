@@ -1,3 +1,3 @@
-function main() {  
+toeminto piä() {
   3 - "4";  
 }  

@@ -1,7 +1,7 @@
-function foo() {}
-function bar() {}
+toeminto foo() {}
+toeminto bar() {}
 
-function main() {  
+toeminto piä() {
   foo();
   suattas (1 < 2) {
     bar();

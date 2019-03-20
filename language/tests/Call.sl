@@ -1,16 +1,16 @@
-function ret(a) { return a; } 
-function dub(a) { return a * 2; } 
-function inc(a) { return a + 1; } 
-function dec(a) { return a - 1; } 
-function call(f, v) { return f(v); }
+toeminto ret(a) { return a; }
+toeminto dub(a) { return a * 2; }
+toeminto inc(a) { return a + 1; }
+toeminto dec(a) { return a - 1; }
+toeminto call(f, v) { return f(v); }
  
-function main() {  
-  println(ret(42));
-  println(dub(21));
-  println(inc(41));
-  println(dec(43));
-  println(call(ret, 42));
-  println(call(dub, 21));
-  println(call(inc, 41));
-  println(call(dec, 43));
+toeminto piä() {
+  tulostappa(ret(42));
+  tulostappa(dub(21));
+  tulostappa(inc(41));
+  tulostappa(dec(43));
+  tulostappa(call(ret, 42));
+  tulostappa(call(dub, 21));
+  tulostappa(call(inc, 41));
+  tulostappa(call(dec, 43));
 }  

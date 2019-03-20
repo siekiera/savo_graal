@@ -50,7 +50,7 @@ import com.oracle.truffle.sl.SavoLanguage;
  * Builtin function to define (or redefine) functions. The provided source code is parsed the same
  * way as the initial source of the script, so the same syntax applies.
  */
-@NodeInfo(shortName = "defineFunction")
+@NodeInfo(shortName = "miäritteleToeminto")
 public abstract class SLDefineFunctionBuiltin extends SLBuiltinNode {
 
     @TruffleBoundary

@@ -1,7 +1,7 @@
-function double(x) {
+toeminto double(x) {
   return 2 * x;
 }
 
-function main() {
+toeminto piä() {
   double(2) = 4;
 }

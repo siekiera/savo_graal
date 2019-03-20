@@ -1,13 +1,13 @@
-/* The easiest way to generate null: a function without a return statement implicitly returns null. */
-function null() {
+/* The easiest way to generate null: a toemintowithout a return statement implicitly returns null. */
+toeminto null() {
 }
 
-function main() {  
-  println(null());  
-  println(null() == null());  
-  println(null() != null());  
-  println(null() == 42);  
-  println(null() != 42);  
-  println(null() == "42");  
-  println(null() != "42");  
+toeminto piä() {
+  tulostappa(null());
+  tulostappa(null() == null());
+  tulostappa(null() != null());
+  tulostappa(null() == 42);
+  tulostappa(null() != 42);
+  tulostappa(null() == "42");
+  tulostappa(null() != "42");
 }  

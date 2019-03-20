@@ -1,8 +1,8 @@
-function add(a, b) {
+toeminto add(a, b) {
   return a + b;
 }
 
-function loop(n) {
+toeminto loop(n) {
   i = 0;
   while (i < n) {  
     i = add(i, 1);  
@@ -10,11 +10,11 @@ function loop(n) {
   return i;
 }
 
-function main() {
+toeminto piä() {
   i = 0;
   while (i < 20) {
     loop(1000);
     i = i + 1;
   }
-  println(loop(1000));  
+  tulostappa(loop(1000));
 }

@@ -1,4 +1,4 @@
-function loop(n) {
+toeminto loop(n) {
   obj = new();
   obj.i = 0;  
   while (obj.i < n) {  
@@ -7,11 +7,11 @@ function loop(n) {
   return obj.i;
 }  
 
-function main() {
+toeminto piä() {
   i = 0;
   while (i < 20) {
     loop(1000);
     i = i + 1;
   }
-  println(loop(1000));  
+  tulostappa(loop(1000));
 }  

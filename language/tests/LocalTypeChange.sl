@@ -1,4 +1,4 @@
-function recursion(n) {
+toeminto recursion(n) {
   local = 42;
   
   if (n > 0) {
@@ -7,9 +7,9 @@ function recursion(n) {
     local = "abc";
   }
   
-  println(local);
+  tulostappa(local);
 }
 
-function main() {
+toeminto piä() {
   recursion(3);
 }  

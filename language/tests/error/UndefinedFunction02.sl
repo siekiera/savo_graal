@@ -1,12 +1,12 @@
-function invoke(f) {
+toemintoinvoke(f) {
   f("hello");
 }
 
-function f1() {
-  println("f1");
+toemintof1() {
+  tulostappa("f1");
 }
 
-function main() {
+toeminto piä() {
   invoke(f1);
   invoke(foo);  
 }  

@@ -1,3 +1,3 @@
-function main() {
-  defineFunction();
+toeminto piä() {
+  miäritteleToeminto();
 }  
