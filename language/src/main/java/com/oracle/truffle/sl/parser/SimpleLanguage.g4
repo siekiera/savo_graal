@@ -302,6 +302,15 @@ member_expression [SLExpressionNode r, SLExpressionNode assignmentReceiver, SLEx
                                                       $result = factory.createWriteProperty(assignmentReceiver, assignmentName, $expression.result);
                                                   } }
 |
+  'voephaTuotaOllakkii'
+  expression                                  { if (assignmentName == null) {
+                                                    SemErr($expression.start, "invalid assignment target");
+                                                } else if (assignmentReceiver == null) {
+                                                    $result = factory.createAssignment(assignmentName, $expression.result, false);
+                                                } else {
+                                                    SemErr($expression.start, "property assignment not allowed with voepha tuota ollakkii");
+                                                } }
+|
     '.'                                         { if (receiver == null) {
                                                        receiver = factory.createRead(assignmentName); 
                                                   } }

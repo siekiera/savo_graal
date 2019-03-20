@@ -1,0 +1,17 @@
+function main() {
+  x voephaTuotaOllakkii 15;
+  println(x);
+
+
+  b voephaTuotaOllakkii 1 == 1;
+  println(b);
+
+
+  b2 voephaTuotaOllakkii 1 == 2;
+  println(b2);
+
+  str voephaTuotaOllakkii "Moi";
+  println(str);
+
+
+}
