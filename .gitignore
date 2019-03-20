@@ -14,3 +14,5 @@ graalvm/
 component/sl-component.jar
 language/dependency-reduced-pom.xml
 native/slnative
+language/src/main/java/com/oracle/truffle/sl/parser/SimpleLanguageLexer.java
+language/src/main/java/com/oracle/truffle/sl/parser/SimpleLanguageParser.java

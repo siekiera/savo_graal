@@ -1,3 +1,3 @@
-function main() {  
+toeminto main() {
   println("Hello World!");  
 }  

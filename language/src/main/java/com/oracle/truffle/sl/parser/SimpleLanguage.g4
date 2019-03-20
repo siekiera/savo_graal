@@ -118,7 +118,7 @@ function function* EOF
 
 function
 :
-'function'
+'toeminto'
 IDENTIFIER
 s='('
                                                 { factory.startFunction($IDENTIFIER, $s); }
@@ -152,10 +152,10 @@ statement [boolean inLoop] returns [SLStatementNode result]
 (
     while_statement                             { $result = $while_statement.result; }
 |
-    b='break'                                   { if (inLoop) { $result = factory.createBreak($b); } else { SemErr($b, "break used outside of loop"); } }
+    b='eeAataEnnee'                                   { if (inLoop) { $result = factory.createBreak($b); } else { SemErr($b, "break used outside of loop"); } }
     ';'
 |
-    c='continue'                                { if (inLoop) { $result = factory.createContinue($c); } else { SemErr($c, "continue used outside of loop"); } }
+    c='annaMännä'                                { if (inLoop) { $result = factory.createContinue($c); } else { SemErr($c, "continue used outside of loop"); } }
     ';'
 |
     if_statement[inLoop]                        { $result = $if_statement.result; }
@@ -172,7 +172,7 @@ statement [boolean inLoop] returns [SLStatementNode result]
 
 while_statement returns [SLStatementNode result]
 :
-w='while'
+w='kuha'
 '('
 condition=expression
 ')'
@@ -182,13 +182,13 @@ body=block[true]                                { $result = factory.createWhile(
 
 if_statement [boolean inLoop] returns [SLStatementNode result]
 :
-i='suattas'
+i='suattasOlla'
 '('
 condition=expression
 ')'
 then=block[inLoop]                              { SLStatementNode elsePart = null; }
 (
-    'else'
+    'vuaEepäOo'
     block[inLoop]                               { elsePart = $block.result; }
 )?                                              { $result = factory.createIf($i, $condition.result, $then.result, elsePart); }
 ;
@@ -196,7 +196,7 @@ then=block[inLoop]                              { SLStatementNode elsePart = nul
 
 return_statement returns [SLStatementNode result]
 :
-r='return'                                      { SLExpressionNode value = null; }
+r='pallaata'                                      { SLExpressionNode value = null; }
 (
     expression                                  { value = $expression.result; }
 )?                                              { $result = factory.createReturn($r, value); }

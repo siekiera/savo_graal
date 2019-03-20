@@ -1,20 +1,20 @@
-function add(a, b) {
-  return a + b;
+toeminto add(a, b) {
+  pallaata a + b;
 }
 
-function loop(n) {
+toeminto loop(n) {
   i = 0;  
   sum = 0;  
-  while (i <= n) {  
+  kuha (i <= n) {
     sum = add(sum, i);  
     i = add(i, 1);  
   }  
-  return sum;  
+  pallaata sum;
 }  
 
-function main() {
+toeminto main() {
   i = 0;
-  while (i < 20) {
+  kuha (i < 20) {
     loop(10000);
     i = i + 1;
   }

@@ -59,7 +59,7 @@ import com.oracle.truffle.api.nodes.RootNode;
  * the contents of the {@link Frame}. Note that this is implemented as a slow path by passing
  * {@code true} to {@link FrameInstance#getFrame(FrameAccess, boolean)}.
  */
-@NodeInfo(shortName = "stacktrace")
+@NodeInfo(shortName = "pinomuljaatus")
 public abstract class SLStackTraceBuiltin extends SLBuiltinNode {
 
     @Specialization

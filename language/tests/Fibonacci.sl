@@ -1,20 +1,20 @@
-function fib(num) { 
-  if (num < 1) {return 0;}
+toeminto fib(num) {
+  suattasOlla (num < 1) {pallaata 0;}
   n1 = 0;
   n2 = 1;
   i = 1;
-  while (i < num) {
+  kuha (i < num) {
     next = n2 + n1;
     n1 = n2;
     n2 = next;
     i = i + 1;
   }
-  return n2;
+  pallaata n2;
 }
 
-function main() {  
+toeminto main() {
   i = 1;
-  while (i <= 10) {
+  kuha (i <= 10) {
     println(i + ": " + fib(i));
     i = i + 1;
   }

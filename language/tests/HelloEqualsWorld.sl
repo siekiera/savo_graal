@@ -1,21 +1,21 @@
-function doIt(a) {
-  println("Initial stack trace:");
-  println(stacktrace());
+toeminto doIt(a) {
+  tulostappaRivi("Alakuperänen virhemuljaatus:");
+  tulostappaRivi(pinomuljaatus());
   
   hello = 123;
-  println("After 123 assignment:");
-  println(stacktrace());
+  tulostappaRivi("Ykkös kakkos kolomose asettamise jäläkee:");
+  tulostappaRivi(pinomuljaatus());
   
   helloEqualsWorld();
-  println("After hello assignment:");
-  println(stacktrace());
+  tulostappaRivi("Päeveen ilimottamisen jäläkee:");
+  tulostappaRivi(pinomuljaatus());
   
 //  readln();
 }
 
-function main() {
+toeminto main() {
   i = 0;
-  while (i < 10) {
+  kuha (i < 10) {
     doIt(i);
     i = i + 1;
   }
