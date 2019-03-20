@@ -182,7 +182,7 @@ body=block[true]                                { $result = factory.createWhile(
 
 if_statement [boolean inLoop] returns [SLStatementNode result]
 :
-i='if'
+i='suattas'
 '('
 condition=expression
 ')'
