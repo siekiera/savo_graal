@@ -189,15 +189,15 @@ import com.oracle.truffle.sl.runtime.SLNull;
  * variables.
  * </ul>
  */
-@TruffleLanguage.Registration(id = SLLanguage.ID, name = "SL", mimeType = SLLanguage.MIME_TYPE)
+@TruffleLanguage.Registration(id = SavoLanguage.ID, name = "SL", mimeType = SavoLanguage.MIME_TYPE)
 @ProvidedTags({StandardTags.CallTag.class, StandardTags.StatementTag.class, StandardTags.RootTag.class, StandardTags.ExpressionTag.class, DebuggerTags.AlwaysHalt.class})
-public final class SLLanguage extends TruffleLanguage<SLContext> {
+public final class SavoLanguage extends TruffleLanguage<SLContext> {
     public static volatile int counter;
 
     public static final String ID = "sl";
     public static final String MIME_TYPE = "application/x-sl";
 
-    public SLLanguage() {
+    public SavoLanguage() {
         counter++;
     }
 
@@ -363,7 +363,7 @@ public final class SLLanguage extends TruffleLanguage<SLContext> {
     }
 
     public static SLContext getCurrentContext() {
-        return getCurrentContext(SLLanguage.class);
+        return getCurrentContext(SavoLanguage.class);
     }
 
     private static final List<NodeFactory<? extends SLBuiltinNode>> EXTERNAL_BUILTINS = Collections.synchronizedList(new ArrayList<>());

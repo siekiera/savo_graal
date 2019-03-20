@@ -46,7 +46,7 @@ import com.oracle.truffle.api.frame.FrameDescriptor;
 import com.oracle.truffle.api.frame.FrameSlot;
 import com.oracle.truffle.api.source.Source;
 import com.oracle.truffle.api.source.SourceSection;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.nodes.SLBinaryNode;
 import com.oracle.truffle.sl.nodes.SLExpressionNode;
 import com.oracle.truffle.sl.nodes.SLRootNode;
@@ -134,9 +134,9 @@ public class SLNodeFactory {
 
 	/* State while parsing a block. */
 	private LexicalScope lexicalScope;
-	private final SLLanguage language;
+	private final SavoLanguage language;
 
-	public SLNodeFactory(SLLanguage language, Source source) {
+	public SLNodeFactory(SavoLanguage language, Source source) {
 		this.language = language;
 		this.source = source;
 		this.allFunctions = new HashMap<>();

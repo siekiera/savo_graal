@@ -46,7 +46,7 @@ import com.oracle.truffle.api.frame.VirtualFrame;
 import com.oracle.truffle.api.nodes.NodeInfo;
 import com.oracle.truffle.api.nodes.RootNode;
 import com.oracle.truffle.api.source.SourceSection;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.builtins.SLBuiltinNode;
 import com.oracle.truffle.sl.nodes.controlflow.SLFunctionBodyNode;
 
@@ -68,7 +68,7 @@ public class SLRootNode extends RootNode {
 
     private final SourceSection sourceSection;
 
-    public SLRootNode(SLLanguage language, FrameDescriptor frameDescriptor, SLExpressionNode bodyNode, SourceSection sourceSection, String name) {
+    public SLRootNode(SavoLanguage language, FrameDescriptor frameDescriptor, SLExpressionNode bodyNode, SourceSection sourceSection, String name) {
         super(language, frameDescriptor);
         this.bodyNode = bodyNode;
         this.name = name;
@@ -82,7 +82,7 @@ public class SLRootNode extends RootNode {
 
     @Override
     public Object execute(VirtualFrame frame) {
-        assert getLanguage(SLLanguage.class).getContextReference().get() != null;
+        assert getLanguage(SavoLanguage.class).getContextReference().get() != null;
         return bodyNode.executeGeneric(frame);
     }
 

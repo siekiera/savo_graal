@@ -55,7 +55,7 @@ import java.util.Map;
 
 import com.oracle.truffle.api.source.Source;
 import com.oracle.truffle.api.RootCallTarget;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.nodes.SLExpressionNode;
 import com.oracle.truffle.sl.nodes.SLRootNode;
 import com.oracle.truffle.sl.nodes.SLStatementNode;
@@ -90,7 +90,7 @@ public void SemErr(Token token, String message) {
     throw new SLParseError(source, token.getLine(), col, token.getText().length(), "Error(s) parsing script:\n" + location + message);
 }
 
-public static Map<String, RootCallTarget> parseSL(SLLanguage language, Source source) {
+public static Map<String, RootCallTarget> parseSL(SavoLanguage language, Source source) {
     SavoLanguageLexer lexer = new SavoLanguageLexer(CharStreams.fromString(source.getCharacters().toString()));
     SavoLanguageParser parser = new SavoLanguageParser(new CommonTokenStream(lexer));
     lexer.removeErrorListeners();

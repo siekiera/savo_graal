@@ -47,7 +47,7 @@ import com.oracle.truffle.api.TruffleLogger;
 import com.oracle.truffle.api.interop.ForeignAccess;
 import com.oracle.truffle.api.interop.TruffleObject;
 import com.oracle.truffle.api.utilities.CyclicAssumption;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.nodes.SLUndefinedFunctionRootNode;
 import java.util.logging.Level;
 
@@ -69,7 +69,7 @@ import java.util.logging.Level;
  * encapsulates a {@link SLUndefinedFunctionRootNode}.
  */
 public final class SLFunction implements TruffleObject {
-    private static final TruffleLogger LOG = TruffleLogger.getLogger(SLLanguage.ID, SLFunction.class);
+    private static final TruffleLogger LOG = TruffleLogger.getLogger(SavoLanguage.ID, SLFunction.class);
 
     /** The name of the function. */
     private final String name;
@@ -84,7 +84,7 @@ public final class SLFunction implements TruffleObject {
      */
     private final CyclicAssumption callTargetStable;
 
-    protected SLFunction(SLLanguage language, String name) {
+    protected SLFunction(SavoLanguage language, String name) {
         this.name = name;
         this.callTarget = Truffle.getRuntime().createCallTarget(new SLUndefinedFunctionRootNode(language, name));
         this.callTargetStable = new CyclicAssumption(name);

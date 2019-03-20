@@ -55,7 +55,7 @@ import org.junit.Test;
 
 import com.oracle.truffle.api.instrumentation.EventBinding;
 import com.oracle.truffle.api.instrumentation.TruffleInstrument;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 
 public class SLSharedCodeSeparatedEnvTest {
 
@@ -74,7 +74,7 @@ public class SLSharedCodeSeparatedEnvTest {
         os1 = new ByteArrayOutputStream();
         os2 = new ByteArrayOutputStream();
 
-        int instances = SLLanguage.counter;
+        int instances = SavoLanguage.counter;
         // @formatter:off
         e1 = Context.newBuilder("sl").engine(engine).out(os1).build();
         e1.getPolyglotBindings().putMember("extra", 1);
@@ -82,7 +82,7 @@ public class SLSharedCodeSeparatedEnvTest {
         e2.getPolyglotBindings().putMember("extra", 2);
         e1.initialize("sl");
         e2.initialize("sl");
-        assertEquals("One SLLanguage instance created", instances + 1, SLLanguage.counter);
+        assertEquals("One SavoLanguage instance created", instances + 1, SavoLanguage.counter);
     }
 
     @After

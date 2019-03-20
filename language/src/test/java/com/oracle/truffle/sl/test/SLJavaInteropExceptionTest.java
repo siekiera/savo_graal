@@ -53,14 +53,13 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.function.Supplier;
 
+import com.oracle.truffle.sl.SavoLanguage;
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.PolyglotException;
 import org.graalvm.polyglot.Source;
 import org.graalvm.polyglot.Value;
 import org.junit.Assert;
 import org.junit.Test;
-
-import com.oracle.truffle.sl.SLLanguage;
 
 public class SLJavaInteropExceptionTest {
     public static class Validator {
@@ -72,9 +71,9 @@ public class SLJavaInteropExceptionTest {
             String sourceText = "function test(validator) {\n" +
                             "  return validator.validateException();\n" +
                             "}";
-            try (Context context = Context.newBuilder(SLLanguage.ID).build()) {
-                context.eval(Source.newBuilder(SLLanguage.ID, sourceText, "Test").build());
-                Value test = context.getBindings(SLLanguage.ID).getMember("test");
+            try (Context context = Context.newBuilder(SavoLanguage.ID).build()) {
+                context.eval(Source.newBuilder(SavoLanguage.ID, sourceText, "Test").build());
+                Value test = context.getBindings(SavoLanguage.ID).getMember("test");
                 test.execute(Validator.this);
             }
         }
@@ -93,9 +92,9 @@ public class SLJavaInteropExceptionTest {
         String sourceText = "function test(validator) {\n" +
                         "  return validator.validateException();\n" +
                         "}";
-        try (Context context = Context.newBuilder(SLLanguage.ID).build()) {
-            context.eval(Source.newBuilder(SLLanguage.ID, sourceText, "Test").build());
-            Value test = context.getBindings(SLLanguage.ID).getMember("test");
+        try (Context context = Context.newBuilder(SavoLanguage.ID).build()) {
+            context.eval(Source.newBuilder(SavoLanguage.ID, sourceText, "Test").build());
+            Value test = context.getBindings(SavoLanguage.ID).getMember("test");
             try {
                 test.execute(new Validator());
                 fail("expected a PolyglotException but did not throw");
@@ -112,9 +111,9 @@ public class SLJavaInteropExceptionTest {
         String sourceText = "function test(validator) {\n" +
                         "  return validator.validateNested();\n" +
                         "}";
-        try (Context context = Context.newBuilder(SLLanguage.ID).build()) {
-            context.eval(Source.newBuilder(SLLanguage.ID, sourceText, "Test").build());
-            Value test = context.getBindings(SLLanguage.ID).getMember("test");
+        try (Context context = Context.newBuilder(SavoLanguage.ID).build()) {
+            context.eval(Source.newBuilder(SavoLanguage.ID, sourceText, "Test").build());
+            Value test = context.getBindings(SavoLanguage.ID).getMember("test");
             try {
                 test.execute(new Validator());
                 fail("expected a PolyglotException but did not throw");
@@ -143,9 +142,9 @@ public class SLJavaInteropExceptionTest {
                         "function test(validator) {\n" +
                         "  return validator." + javaMethod + "(supplier);\n" +
                         "}";
-        try (Context context = Context.newBuilder(SLLanguage.ID).build()) {
-            context.eval(Source.newBuilder(SLLanguage.ID, sourceText, "Test").build());
-            Value test = context.getBindings(SLLanguage.ID).getMember("test");
+        try (Context context = Context.newBuilder(SavoLanguage.ID).build()) {
+            context.eval(Source.newBuilder(SavoLanguage.ID, sourceText, "Test").build());
+            Value test = context.getBindings(SavoLanguage.ID).getMember("test");
             try {
                 test.execute(new Validator());
                 fail("expected a PolyglotException but did not throw");
@@ -173,9 +172,9 @@ public class SLJavaInteropExceptionTest {
                         "function test(validator) {\n" +
                         "  return validator." + javaMethod + "(new());\n" +
                         "}";
-        try (Context context = Context.newBuilder(SLLanguage.ID).build()) {
-            context.eval(Source.newBuilder(SLLanguage.ID, sourceText, "Test").build());
-            Value test = context.getBindings(SLLanguage.ID).getMember("test");
+        try (Context context = Context.newBuilder(SavoLanguage.ID).build()) {
+            context.eval(Source.newBuilder(SavoLanguage.ID, sourceText, "Test").build());
+            Value test = context.getBindings(SavoLanguage.ID).getMember("test");
             test.execute(new Validator());
         }
     }

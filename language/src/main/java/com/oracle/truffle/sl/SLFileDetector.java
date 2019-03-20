@@ -48,7 +48,7 @@ public final class SLFileDetector extends FileTypeDetector {
     @Override
     public String probeContentType(Path path) throws IOException {
         if (path.getFileName().toString().endsWith(".sl")) {
-            return SLLanguage.MIME_TYPE;
+            return SavoLanguage.MIME_TYPE;
         }
         return null;
     }

@@ -47,13 +47,13 @@ import com.oracle.truffle.api.dsl.ImplicitCast;
 import com.oracle.truffle.api.dsl.TypeCast;
 import com.oracle.truffle.api.dsl.TypeCheck;
 import com.oracle.truffle.api.dsl.TypeSystem;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.runtime.SLBigNumber;
 import com.oracle.truffle.sl.runtime.SLFunction;
 import com.oracle.truffle.sl.runtime.SLNull;
 
 /**
- * The type system of SL, as explained in {@link SLLanguage}. Based on the {@link TypeSystem}
+ * The type system of SL, as explained in {@link SavoLanguage}. Based on the {@link TypeSystem}
  * annotation, the Truffle DSL generates the subclass {@link SLTypesGen} with type test and type
  * conversion methods for all types. In this class, we only cover types where the automatically
  * generated ones would not be sufficient.

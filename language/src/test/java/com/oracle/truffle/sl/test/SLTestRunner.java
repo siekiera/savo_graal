@@ -79,7 +79,7 @@ import org.junit.runners.ParentRunner;
 import org.junit.runners.model.InitializationError;
 
 import com.oracle.truffle.api.dsl.NodeFactory;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.builtins.SLBuiltinNode;
 import com.oracle.truffle.sl.test.SLTestRunner.TestCase;
 
@@ -289,7 +289,7 @@ public class SLTestRunner extends ParentRunner<TestCase> {
         try {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             for (NodeFactory<? extends SLBuiltinNode> builtin : builtins) {
-                SLLanguage.installBuiltin(builtin);
+                SavoLanguage.installBuiltin(builtin);
             }
 
             context = Context.newBuilder().in(new ByteArrayInputStream(testCase.testInput.getBytes("UTF-8"))).out(out).build();
@@ -312,7 +312,7 @@ public class SLTestRunner extends ParentRunner<TestCase> {
     private static void run(Context context, Path path, PrintWriter out) throws IOException {
         try {
             /* Parse the SL source file. */
-            Source source = Source.newBuilder(SLLanguage.ID, path.toFile()).interactive(true).build();
+            Source source = Source.newBuilder(SavoLanguage.ID, path.toFile()).interactive(true).build();
 
             /* Call the main entry point, without any arguments. */
             context.eval(source);

@@ -62,7 +62,7 @@ import com.oracle.truffle.api.object.DynamicObject;
 import com.oracle.truffle.api.object.Layout;
 import com.oracle.truffle.api.object.Shape;
 import com.oracle.truffle.api.source.Source;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.builtins.SLBuiltinNode;
 import com.oracle.truffle.sl.builtins.SLDefineFunctionBuiltinFactory;
 import com.oracle.truffle.sl.builtins.SLEvalBuiltinFactory;
@@ -84,7 +84,7 @@ import com.oracle.truffle.sl.nodes.SLRootNode;
 import com.oracle.truffle.sl.nodes.local.SLReadArgumentNode;
 
 /**
- * The run-time state of SL during execution. The context is created by the {@link SLLanguage}. It
+ * The run-time state of SL during execution. The context is created by the {@link SavoLanguage}. It
  * is used, for example, by {@link SLBuiltinNode#getContext() builtin functions}.
  * <p>
  * It would be an error to have two different context instances during the execution of one script.
@@ -93,7 +93,7 @@ import com.oracle.truffle.sl.nodes.local.SLReadArgumentNode;
  */
 public final class SLContext {
 
-    private static final Source BUILTIN_SOURCE = Source.newBuilder("").name("SL builtin").language(SLLanguage.ID).build();
+    private static final Source BUILTIN_SOURCE = Source.newBuilder("").name("SL builtin").language(SavoLanguage.ID).build();
     private static final Layout LAYOUT = Layout.createLayout();
 
     private final Env env;
@@ -101,11 +101,11 @@ public final class SLContext {
     private final PrintWriter output;
     private final SLFunctionRegistry functionRegistry;
     private final Shape emptyShape;
-    private final SLLanguage language;
+    private final SavoLanguage language;
     private final AllocationReporter allocationReporter;
     private final Iterable<Scope> topScopes; // Cache the top scopes
 
-    public SLContext(SLLanguage language, TruffleLanguage.Env env, List<NodeFactory<? extends SLBuiltinNode>> externalBuiltins) {
+    public SLContext(SavoLanguage language, TruffleLanguage.Env env, List<NodeFactory<? extends SLBuiltinNode>> externalBuiltins) {
         this.env = env;
         this.input = new BufferedReader(new InputStreamReader(env.in()));
         this.output = new PrintWriter(env.out(), true);
@@ -276,7 +276,7 @@ public final class SLContext {
     }
 
     public static SLContext getCurrent() {
-        return SLLanguage.getCurrentContext();
+        return SavoLanguage.getCurrentContext();
     }
 
 }

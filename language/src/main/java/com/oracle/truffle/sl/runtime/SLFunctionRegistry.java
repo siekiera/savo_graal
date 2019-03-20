@@ -49,7 +49,7 @@ import java.util.Map;
 import com.oracle.truffle.api.RootCallTarget;
 import com.oracle.truffle.api.interop.TruffleObject;
 import com.oracle.truffle.api.source.Source;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.parser.SavoLanguageParser;
 
 /**
@@ -57,10 +57,10 @@ import com.oracle.truffle.sl.parser.SavoLanguageParser;
  */
 public final class SLFunctionRegistry {
 
-    private final SLLanguage language;
+    private final SavoLanguage language;
     private final FunctionsObject functionsObject = new FunctionsObject();
 
-    public SLFunctionRegistry(SLLanguage language) {
+    public SLFunctionRegistry(SavoLanguage language) {
         this.language = language;
     }
 

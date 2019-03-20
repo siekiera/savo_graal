@@ -44,7 +44,7 @@ import com.oracle.truffle.api.CompilerDirectives.TruffleBoundary;
 import com.oracle.truffle.api.dsl.Specialization;
 import com.oracle.truffle.api.nodes.NodeInfo;
 import com.oracle.truffle.api.source.Source;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 
 /**
  * Builtin function to define (or redefine) functions. The provided source code is parsed the same
@@ -59,7 +59,7 @@ public abstract class SLDefineFunctionBuiltin extends SLBuiltinNode {
         // @formatter:off
         Source source = Source.newBuilder(code).
             name("[defineFunction]").
-            language(SLLanguage.ID).
+            language(SavoLanguage.ID).
             build();
         // @formatter:on
         /* The same parsing code as for parsing the initial source. */

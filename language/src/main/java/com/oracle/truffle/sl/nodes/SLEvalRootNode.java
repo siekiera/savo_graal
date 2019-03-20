@@ -49,7 +49,7 @@ import com.oracle.truffle.api.TruffleLanguage.ContextReference;
 import com.oracle.truffle.api.frame.VirtualFrame;
 import com.oracle.truffle.api.nodes.DirectCallNode;
 import com.oracle.truffle.api.nodes.RootNode;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.runtime.SLContext;
 import com.oracle.truffle.sl.runtime.SLNull;
 
@@ -73,7 +73,7 @@ public final class SLEvalRootNode extends RootNode {
 
     @Child private DirectCallNode mainCallNode;
 
-    public SLEvalRootNode(SLLanguage language, RootCallTarget rootFunction, Map<String, RootCallTarget> functions) {
+    public SLEvalRootNode(SavoLanguage language, RootCallTarget rootFunction, Map<String, RootCallTarget> functions) {
         super(null); // internal frame
         this.functions = functions;
         this.mainCallNode = rootFunction != null ? DirectCallNode.create(rootFunction) : null;

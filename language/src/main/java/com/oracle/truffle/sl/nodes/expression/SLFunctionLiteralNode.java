@@ -46,7 +46,7 @@ import com.oracle.truffle.api.CompilerDirectives.CompilationFinal;
 import com.oracle.truffle.api.TruffleLanguage.ContextReference;
 import com.oracle.truffle.api.frame.VirtualFrame;
 import com.oracle.truffle.api.nodes.NodeInfo;
-import com.oracle.truffle.sl.SLLanguage;
+import com.oracle.truffle.sl.SavoLanguage;
 import com.oracle.truffle.sl.nodes.SLExpressionNode;
 import com.oracle.truffle.sl.runtime.SLContext;
 import com.oracle.truffle.sl.runtime.SLFunction;
@@ -74,7 +74,7 @@ public final class SLFunctionLiteralNode extends SLExpressionNode {
 
     private final ContextReference<SLContext> reference;
 
-    public SLFunctionLiteralNode(SLLanguage language, String functionName) {
+    public SLFunctionLiteralNode(SavoLanguage language, String functionName) {
         this.functionName = functionName;
         this.reference = language.getContextReference();
     }
