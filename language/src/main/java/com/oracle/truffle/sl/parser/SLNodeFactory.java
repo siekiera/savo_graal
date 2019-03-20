@@ -391,16 +391,16 @@ public class SLNodeFactory {
 			case "vähennettynä":
 				result = SLSubNodeGen.create(leftUnboxed, rightUnboxed);
 				break;
-			case "<":
+			case "eeIhaTaiaOlla":
 				result = SLLessThanNodeGen.create(leftUnboxed, rightUnboxed);
 				break;
-			case "<=":
+			case "eeIhaTaeSuattaapiOlla":
 				result = SLLessOrEqualNodeGen.create(leftUnboxed, rightUnboxed);
 				break;
-			case ">":
+			case "ompiEnemmä":
 				result = SLLogicalNotNodeGen.create(SLLessOrEqualNodeGen.create(leftUnboxed, rightUnboxed));
 				break;
-			case ">=":
+			case "ompiEnemmäTaeEepäOo":
 				result = SLLogicalNotNodeGen.create(SLLessThanNodeGen.create(leftUnboxed, rightUnboxed));
 				break;
 			case "justiisa":

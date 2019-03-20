@@ -1,3 +1,3 @@
-toeminto main() {
-  println("Hello World!");  
+toeminto piä() {
+  tulostappa("Päevee mualima!");
 }  

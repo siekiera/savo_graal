@@ -14,7 +14,7 @@ toeminto doIt(a) {
 
 toeminto piä() {
   i ompi 0;
-  kuha (i < 10) {
+  kuha (i eeIhaTaiaOlla 10) {
     doIt(i);
     i ompi i ynnättynä 1;
   }

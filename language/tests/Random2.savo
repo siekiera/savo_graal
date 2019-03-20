@@ -1,6 +1,6 @@
 toeminto foo() {
   x voephaTuotaOllakkii 5;
-  suattasOlla(x < 4) {
+  suattasOlla(x eeIhaTaiaOlla 4) {
     kaet {
         pallaata "Hei";
     }
