@@ -158,11 +158,16 @@ statement [boolean inLoop] returns [SLStatementNode result]
     c='annaMännä'                                { if (inLoop) { $result = factory.createContinue($c); } else { SemErr($c, "continue used outside of loop"); } }
     ';'
 |
+    thr='viskoo'                                { $result = factory.createThrow($thr); }
+    ';'
+|
     if_statement[inLoop]                        { $result = $if_statement.result; }
 |
     maybe_statement[inLoop]                     { $result = $maybe_statement.result; }
 |
     async_statement[inLoop]                     { $result = $async_statement.result; }
+|
+    try_catch_statement[inLoop]                 { $result = $try_catch_statement.result; }
 |
     return_statement                            { $result = $return_statement.result; }
 |
@@ -207,6 +212,14 @@ async_statement [boolean inLoop] returns [SLStatementNode result]
 :
 i='eeIhaVielä'
 then=block[inLoop]                              { $result = factory.createAsync($i, $then.result); }
+;
+
+try_catch_statement [boolean inLoop] returns [SLStatementNode result]
+:
+i='kokkeele'
+tryBlock=block[inLoop]
+'nappoo'
+catchBlock=block[inLoop]                        { $result = factory.createTryCatch($i, $tryBlock.result, $catchBlock.result); }
 ;
 
 return_statement returns [SLStatementNode result]

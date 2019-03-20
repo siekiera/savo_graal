@@ -66,6 +66,8 @@ import com.oracle.truffle.sl.nodes.controlflow.SLReturnNode;
 import com.oracle.truffle.sl.nodes.controlflow.SLWhileNode;
 import com.oracle.truffle.sl.nodes.controlflow.SavoAsyncNode;
 import com.oracle.truffle.sl.nodes.controlflow.SavoMaybeNode;
+import com.oracle.truffle.sl.nodes.controlflow.SavoRaiseExceptionNode;
+import com.oracle.truffle.sl.nodes.controlflow.SavoTryCatchNode;
 import com.oracle.truffle.sl.nodes.expression.SLAddNodeGen;
 import com.oracle.truffle.sl.nodes.expression.SLBigIntegerLiteralNode;
 import com.oracle.truffle.sl.nodes.expression.SLDivNodeGen;
@@ -98,7 +100,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Helper class used by the SL {@link Parser} to create nodes. The code is factored out of the
+ * Helper class used by the SL {@code Parser} to create nodes. The code is factored out of the
  * automatically generated parser to keep the attributed grammar of SL small.
  */
 public class SLNodeFactory {
@@ -262,6 +264,12 @@ public class SLNodeFactory {
 		return breakNode;
 	}
 
+	public SLStatementNode createThrow(Token throwToken) {
+		final SavoRaiseExceptionNode raiseExceptionNode = new SavoRaiseExceptionNode();
+		srcFromToken(raiseExceptionNode, throwToken);
+		return raiseExceptionNode;
+	}
+
 	/**
 	 * Returns an {@link SLContinueNode} for the given token.
 	 *
@@ -352,6 +360,18 @@ public class SLNodeFactory {
 		final int end = block.getSourceEndIndex();
 		final SavoAsyncNode node = new SavoAsyncNode(block);
 		node.setSourceSection(start, end);
+		return node;
+	}
+
+	public SLStatementNode createTryCatch(Token tryToken, SLStatementNode tryBlock, SLStatementNode catchBlock) {
+		if (tryBlock == null || catchBlock == null) {
+			return null;
+		}
+
+		final int start = tryToken.getStartIndex();
+		final int end = catchBlock.getSourceEndIndex();
+		final SavoTryCatchNode node = new SavoTryCatchNode(tryBlock, catchBlock);
+		node.setSourceSection(start, end - start);
 		return node;
 	}
 
