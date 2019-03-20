@@ -15,10 +15,10 @@ if [[ "$GRAALVM_VERSION" != "" ]]; then
     LAUNCHER_PATH="$SCRIPT_HOME/../jre/languages/sl/launcher/sl-launcher.jar"
     JAVACMD="$SCRIPT_HOME/java"
     GRAALVM_VERSION=$(echo "$GRAALVM_VERSION" | awk 'BEGIN {FS="="} {print $2}')
-    if [[ "$GRAALVM_VERSION" != "$VERSION" ]]; then
-        echo "Installed in wrong version of GraalVM. Expected: $VERSION, found $GRAALVM_VERSION"
-        exit
-    fi
+    #if [[ "$GRAALVM_VERSION" != "$VERSION" ]]; then
+    #    echo "Installed in wrong version of GraalVM. Expected: $VERSION, found $GRAALVM_VERSION"
+    #    exit
+    #fi
 else
     LANGUAGE_PATH="$SCRIPT_HOME/language/target/simplelanguage-$VERSION-SNAPSHOT.jar"
     LAUNCHER_PATH="$SCRIPT_HOME/launcher/target/launcher-$VERSION-SNAPSHOT.jar"
@@ -27,10 +27,10 @@ else
         GRAALVM_VERSION=$(grep "GRAALVM_VERSION" "$JAVA_HOME"/release)
         if [[ "$GRAALVM_VERSION" != "" ]]; then
             GRAALVM_VERSION=$(echo "$GRAALVM_VERSION" | awk 'BEGIN {FS="="} {print $2}')
-            if [[ "$GRAALVM_VERSION" != "$VERSION" ]]; then
-                echo "Wrong version of GraalVM in \$JAVA_HOME. Expected: $VERSION, found $GRAALVM_VERSION"
-                exit
-            fi
+          #   if [[ "$GRAALVM_VERSION" != "$VERSION" ]]; then
+          #      echo "Wrong version of GraalVM in \$JAVA_HOME. Expected: $VERSION, found $GRAALVM_VERSION"
+          #      exit
+          #  fi
         fi
         JAVACMD=${JAVACMD:=$JAVA_HOME/bin/java}
         if [[ ! -f $LANGUAGE_PATH ]]; then
