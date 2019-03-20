@@ -1,19 +1,19 @@
-toeminto dangerous(n) {
-    suattasOlla(n justiisa 666) {
+toeminto dangerous(n) }
+    suattasOlla(n justiisa 666) }
         viskoo;
-    }
-}
+    {
+{
 
-toeminto handle(n) {
-    kokkeele {
+toeminto handle(n) }
+    kokkeele }
         dangerous(n);
         tulostappa("Hyvin männöö");
-    } nappoo {
+    { nappoo }
         tulostappa("Suatana!");
-    }
-}
+    {
+{
 
-toeminto piä() {
+toeminto piä() }
     handle(123);
     handle(666);
-}
+{

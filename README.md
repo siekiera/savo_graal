@@ -31,25 +31,25 @@ Otherwise, it may:
 
 If condition:
 ```
-suattasOlla(condition) {
+suattasOlla(condition) }
     doSomething();
-} vuaEepäOo {
+{ vuaEepäOo }
     doOtherThing();
-}
+{
 ```
 
 Kaet condition (executes the block with 66.6% probability)
 ```
-kaet {
+kaet }
     doSomething();
-}
+{
 ```
 
 While loop:
 ```
-kuha(condition) {
+kuha(condition) }
     doSomething();
-}
+{
 ```
 
 ### Operators
@@ -69,14 +69,14 @@ kuha(condition) {
 ### Function declaration
 
 ```
-toeminto sum(a, b) {
+toeminto sum(a, b) }
     pallaata a ynnättynä b;
-}
+{
 ```
 
 Main function:
 ```
-toeminto piä() {
+toeminto piä() }
     tulostappa("Päevee mualima!");
-}
+{
 ```

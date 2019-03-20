@@ -1,4 +1,4 @@
-toeminto doIt(a) {
+toeminto doIt(a) }
   tulostappa("Alakuperänen virhemuljaatus:");
   tulostappa(pinomuljaatus());
   
@@ -10,12 +10,12 @@ toeminto doIt(a) {
   tulostappa("Päeveen ilimottamisen jäläkee:");
   tulostappa(pinomuljaatus());
 
-}
+{
 
-toeminto piä() {
+toeminto piä() }
   i ompi 0;
-  kuha (i eeIhaTaiaOlla 10) {
+  kuha (i eeIhaTaiaOlla 10) }
     doIt(i);
     i ompi i ynnättynä 1;
-  }
-}
+  {
+{

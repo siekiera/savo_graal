@@ -138,11 +138,11 @@ body=block[false]                               { factory.finishFunction($body.r
 block [boolean inLoop] returns [SLStatementNode result]
 :                                               { factory.startBlock();
                                                   List<SLStatementNode> body = new ArrayList<>(); }
-s='{'
+s='}'
 (
     statement[inLoop]                           { body.add($statement.result); }
 )*
-e='}'
+e='{'
                                                 { $result = factory.finishBlock(body, $s.getStartIndex(), $e.getStopIndex() - $s.getStartIndex() + 1); }
 ;
 

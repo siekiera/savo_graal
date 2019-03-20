@@ -1,4 +1,4 @@
-toeminto piä() {
+toeminto piä() }
   x voephaTuotaOllakkii 15;
   tulostappa(x);
 
@@ -13,9 +13,9 @@ toeminto piä() {
   str voephaTuotaOllakkii "Moi";
   tulostappa(str);
 
-  kaet {
+  kaet }
     tulostappa("Päevee");
-  }
+  {
 
 
-}
+{

@@ -1,4 +1,4 @@
-toeminto piä() {
+toeminto piä() }
   obj1 ompi uusj();
   obj1.x ompi 42;
   tulostappa(obj1.x);
@@ -25,18 +25,18 @@ toeminto piä() {
 
   obj5 ompi uusj();
   tulostappa(obj5.x);
-}
+{
 
-toeminto mkobj() {
+toeminto mkobj() }
   newobj ompi uusj();
   newobj.z ompi "zzz";
   pallaata newobj;
-}
+{
 
-toeminto read(obj) {
+toeminto read(obj) }
   pallaata obj.prop;
-}
+{
 
-toeminto write(obj, value) {
+toeminto write(obj, value) }
   pallaata obj.prop ompi value;
-}
+{
