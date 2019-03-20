@@ -49,7 +49,7 @@ import com.oracle.truffle.sl.runtime.SLContext;
 /**
  * Built-in function to create a new object. Objects in SL are simply made up of name/value pairs.
  */
-@NodeInfo(shortName = "new")
+@NodeInfo(shortName = "uusj")
 public abstract class SLNewObjectBuiltin extends SLBuiltinNode {
 
     @CompilationFinal SLContext context;

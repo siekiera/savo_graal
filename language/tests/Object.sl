@@ -1,21 +1,21 @@
-function main() {  
-  obj1 = new();
-  obj1.x = 42;
-  println(obj1.x);
+toeminto piä() {
+  obj1 ompi uusj();
+  obj1.x ompi 42;
+  tulostappa(obj1.x);
   
-  obj2 = new();
-  obj2.o = obj1;
-  println(obj2.o.x);
-  obj2.o.y = "why";
-  println(obj1.y);
+  obj2 ompi uusj();
+  obj2.o ompi obj1;
+  tulostappa(obj2.o.x);
+  obj2.o.y ompi "why";
+  tulostappa(obj1.y);
   
-  println(mkobj().z);
+  tulostappa(mkobj().z);
   
-  obj3 = new();
-  obj3.fn = mkobj;
-  println(obj3.fn().z);
+  obj3 ompi uusj();
+  obj3.fn ompi mkobj;
+  tulostappa(obj3.fn().z);
 
-  obj4 = new();
+  obj4 ompi uusj();
   write(obj4, 1);
   read(obj4);
   write(obj4, 2);
@@ -23,20 +23,20 @@ function main() {
   write(obj4, "three");
   read(obj4);
 
-  obj5 = new();
-  println(obj5.x);
+  obj5 ompi uusj();
+  tulostappa(obj5.x);
 }
 
-function mkobj() {
-  newobj = new();
-  newobj.z = "zzz";
-  return newobj;
+toeminto mkobj() {
+  newobj ompi uusj();
+  newobj.z ompi "zzz";
+  pallaata newobj;
 }
 
-function read(obj) {
-  return obj.prop;
+toeminto read(obj) {
+  pallaata obj.prop;
 }
 
-function write(obj, value) {
-  return obj.prop = value;
+toeminto write(obj, value) {
+  pallaata obj.prop ompi value;
 }
