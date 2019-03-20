@@ -1,13 +1,82 @@
-# SimpleLanguage
+# Savolang
 
-A simple demonstration language built using Truffle for the GraalVM.
+An implementation of savolang using Truffle for the GraalVM.
 
-SimpleLanguage is heavily documented to explain the how and why of writing a
-Truffle language. A good way to read this documentation is to generate HTML of
-the JavaDoc comments and read that, and then read the source alongside the
-comments.
+Savolang is a programming language with syntax based on the [Savonian dialects of Finnish language.](https://en.wikipedia.org/wiki/Savonian_dialects)
+
+Implementation forked from SimpleLanguage example.
 
 This repository is licensed under the permissive UPL licence. Fork it to begin
-your own Truffle language.
+your own Truffle language. [GraalVM website](http://www.graalvm.org/docs/graalvm-as-a-platform/implement-language/)
 
-For instructions on how to get started please refer to [our website](http://www.graalvm.org/docs/graalvm-as-a-platform/implement-language/)
+# Syntax
+
+### Variable declaration
+Deterministic assignment
+
+```[variable name] ompi [value]```
+
+Non-deterministic assignment
+
+```[variable name] voephaTuotaOllakkii [value]```
+
+`voephaTuotaOllakkii` will set the value with 70.5% probability.
+
+Otherwise, it may:
+* set a random number (if value is a number)
+* set the opposite boolean value (if value is a logical expression)
+* set null
+
+### Control structures
+
+If condition:
+```
+suattasOlla(condition) {
+    doSomething();
+} vuaEepäOo {
+    doOtherThing();
+}
+```
+
+Kaet condition (executes the block with 66.6% probability)
+```
+kaet {
+    doSomething();
+}
+```
+
+While loop:
+```
+kuha(condition) {
+    doSomething();
+}
+```
+
+### Operators
+
+|Operation|Keyword|
+|---|---|
+|+ |ynnättynä |
+|-| vähennettynä|
+|*|kerrottuna |
+|/|jaettuna |
+|<|eeIhaTaiaOlla |
+|<=|eeIhaTaeSuattaapiOlla |
+|>=|ompiEnemmäTaeEepäOo |
+| \> |ompiEnemmä |
+|==| justiisa|
+
+### Function declaration
+
+```
+toeminto sum(a, b) {
+    palaata a ynnättynä b;
+}
+```
+
+Main function:
+```
+toeminto piä() {
+    tulostappa("Päevee mualima!");
+}
+```
