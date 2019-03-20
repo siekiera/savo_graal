@@ -337,7 +337,7 @@ WS : [ \t\r\n\u000C]+ -> skip;
 COMMENT : '/*' .*? '*/' -> skip;
 LINE_COMMENT : '//' ~[\r\n]* -> skip;
 
-fragment LETTER : [A-Z] | [a-z] | '_' | '$';
+fragment LETTER : [A-Z] | [a-z] | '_' | '$' | 'ä' | 'ö';
 fragment NON_ZERO_DIGIT : [1-9];
 fragment DIGIT : [0-9];
 fragment HEX_DIGIT : [0-9] | [a-f] | [A-F];

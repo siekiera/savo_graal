@@ -1,4 +1,4 @@
-toeminto main() {
+toeminto piä() {
   x voephaTuotaOllakkii 15;
   tulostappaRivi(x);
 

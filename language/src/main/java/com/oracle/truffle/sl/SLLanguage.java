@@ -219,7 +219,7 @@ public final class SLLanguage extends TruffleLanguage<SLContext> {
         } else {
             Source requestedSource = request.getSource();
             StringBuilder sb = new StringBuilder();
-            sb.append("function main(");
+            sb.append("function piä(");
             String sep = "";
             for (String argumentName : request.getArgumentNames()) {
                 sb.append(sep);
@@ -237,7 +237,7 @@ public final class SLLanguage extends TruffleLanguage<SLContext> {
             functions = SimpleLanguageParser.parseSL(this, decoratedSource);
         }
 
-        RootCallTarget main = functions.get("main");
+        RootCallTarget main = functions.get("piä");
         RootNode evalMain;
         if (main != null) {
             /*

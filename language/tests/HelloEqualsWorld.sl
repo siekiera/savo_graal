@@ -13,7 +13,7 @@ toeminto doIt(a) {
 //  readln();
 }
 
-toeminto main() {
+toeminto piä() {
   i = 0;
   kuha (i < 10) {
     doIt(i);
