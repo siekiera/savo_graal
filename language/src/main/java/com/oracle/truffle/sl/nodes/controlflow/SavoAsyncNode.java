@@ -8,7 +8,7 @@ import com.oracle.truffle.sl.nodes.SLStatementNode;
 /**
  * A control flow node, which may execute the block asynchronously
  *
- * @author michal.toporowski
+ * @author siekiera
  * @since 20.3.2019
  */
 @NodeInfo(shortName = "eeIhaVielä", description = "The node implementing asynchronous statement")
