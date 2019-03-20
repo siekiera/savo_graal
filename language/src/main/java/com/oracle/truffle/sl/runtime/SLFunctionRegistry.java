@@ -50,7 +50,7 @@ import com.oracle.truffle.api.RootCallTarget;
 import com.oracle.truffle.api.interop.TruffleObject;
 import com.oracle.truffle.api.source.Source;
 import com.oracle.truffle.sl.SLLanguage;
-import com.oracle.truffle.sl.parser.SimpleLanguageParser;
+import com.oracle.truffle.sl.parser.SavoLanguageParser;
 
 /**
  * Manages the mapping from function names to {@link SLFunction function objects}.
@@ -95,7 +95,7 @@ public final class SLFunctionRegistry {
     }
 
     public void register(Source newFunctions) {
-        register(SimpleLanguageParser.parseSL(language, newFunctions));
+        register(SavoLanguageParser.parseSL(language, newFunctions));
     }
 
     /**

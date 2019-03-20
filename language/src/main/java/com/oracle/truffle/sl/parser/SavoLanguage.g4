@@ -43,11 +43,11 @@
  * The parser and lexer need to be generated using "mx create-sl-parser".
  */
 
-grammar SimpleLanguage;
+grammar SavoLanguage;
 
 @parser::header
 {
-// DO NOT MODIFY - generated from SimpleLanguage.g4 using "mx create-sl-parser"
+// DO NOT MODIFY - generated from SavoLanguage.g4 using "mx create-sl-parser"
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,8 +91,8 @@ public void SemErr(Token token, String message) {
 }
 
 public static Map<String, RootCallTarget> parseSL(SLLanguage language, Source source) {
-    SimpleLanguageLexer lexer = new SimpleLanguageLexer(CharStreams.fromString(source.getCharacters().toString()));
-    SimpleLanguageParser parser = new SimpleLanguageParser(new CommonTokenStream(lexer));
+    SavoLanguageLexer lexer = new SavoLanguageLexer(CharStreams.fromString(source.getCharacters().toString()));
+    SavoLanguageParser parser = new SavoLanguageParser(new CommonTokenStream(lexer));
     lexer.removeErrorListeners();
     parser.removeErrorListeners();
     BailoutErrorListener listener = new BailoutErrorListener(source);
