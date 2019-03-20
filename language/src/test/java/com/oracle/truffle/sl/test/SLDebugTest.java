@@ -191,7 +191,7 @@ public class SLDebugTest {
                         "  return fac(5);\n" +
                         "}\n" +
                         "function fac(n) {\n" +
-                        "  if (n <= 1) {\n" +
+                        "  suattas (n <= 1) {\n" +
                         "    return 1;\n" + // break
                         "  }\n" +
                         "  return n * fac(n - 1);\n" +
@@ -264,7 +264,7 @@ public class SLDebugTest {
                         "  return fac(5);\n" +
                         "}\n" +
                         "function fac(n) {\n" +
-                        "  if (n <= 1) {\n" +
+                        "  suattas (n <= 1) {\n" +
                         "    return 1;\n" + // break
                         "  }\n" +
                         "  return n * fac(n - 1);\n" +
@@ -300,7 +300,7 @@ public class SLDebugTest {
                         "  return fac(5);\n" +
                         "}\n" +
                         "function fac(n) {\n" +
-                        "  if (n <= 1) {\n" +
+                        "  suattas (n <= 1) {\n" +
                         "    debugger; return 1;\n" + // // break
                         "  }\n" +
                         "  return n * fac(n - 1);\n" +
@@ -459,7 +459,7 @@ public class SLDebugTest {
     public void testValuesScope() throws Throwable {
         final Source varsSource = slCode("function main() {\n" +
                         "  a = 1;\n" +
-                        "  if (a > 0) {\n" +
+                        "  suattas (a > 0) {\n" +
                         "    b = 10;\n" +
                         "    println(b);\n" +
                         "  }\n" +
@@ -626,7 +626,7 @@ public class SLDebugTest {
                         "  return fac(10);\n" +
                         "}\n" +
                         "function fac(n) {\n" +
-                        "  if (n <= 1) {\n" +
+                        "  suattas (n <= 1) {\n" +
                         "    return 1;\n" + // break
                         "  }\n" +
                         "  return n * fac(n - 1);\n" +
@@ -670,7 +670,7 @@ public class SLDebugTest {
     @Test
     public void testStackInterop() {
         final Source stackSource = slCode("function fac(n, multiply) {\n" +
-                        "  if (n <= 1) {\n" +
+                        "  suattas (n <= 1) {\n" +
                         "    debugger;\n" +
                         "    return 1;\n" +
                         "  }\n" +
@@ -733,7 +733,7 @@ public class SLDebugTest {
                         "  return fac(10);\n" +
                         "}\n" +
                         "function fac(n) {\n" +
-                        "  if (n <= 1) {\n" +
+                        "  suattas (n <= 1) {\n" +
                         "    return 1;\n" + // break
                         "  }\n" +
                         "  return n * fac(n - 1);\n" +
@@ -822,7 +822,7 @@ public class SLDebugTest {
     public void testMisplacedLineBreakpoints() throws Throwable {
         final String sourceStr = "// A comment\n" +              // 1
                         "function invocable(n) {\n" +
-                        "  if (R1-3_R27_n <= 1) {\n" +
+                        "  suattas (R1-3_R27_n <= 1) {\n" +
                         "    R4-6_one \n" +
                         "        =\n" +                 // 5
                         "          1;\n" +
@@ -861,7 +861,7 @@ public class SLDebugTest {
     public void testMisplacedColumnBreakpoints() throws Throwable {
         final String sourceStr = "// A B1_comment\n" +              // 1
                         "function B2_ invocable(B3_n) {\n" +
-                        "  if (R1-4_R16_n <= 1) B4_ B5_{B6_\n" +
+                        "  suattas (R1-4_R16_n <= 1) B4_ B5_{B6_\n" +
                         "    R5-7_one \n" +
                         "        =\n" +                 // 5
                         "          B7_1;\n" +
@@ -898,7 +898,7 @@ public class SLDebugTest {
     public void testBreakpointEverywhereBreaks() throws Throwable {
         final String sourceCode = "// A comment\n" +              // 1
                         "function invocable(n) {\n" +
-                        "  if (n <= 1) {\n" +
+                        "  suattas (n <= 1) {\n" +
                         "    one \n" +
                         "        =\n" +                 // 5
                         "          1;\n" +

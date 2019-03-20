@@ -73,7 +73,7 @@ public class SLInteropControlFlowTest {
 
     @Test
     public void testIf() throws IOException {
-        final Source src = Source.newBuilder("sl", "function testIf(a) {if(a) {return 1;} else {return 0;}} function main() {return testIf;}", "testIf.sl").build();
+        final Source src = Source.newBuilder("sl", "function testIf(a) {suattas(a) {return 1;} else {return 0;}} function main() {return testIf;}", "testIf.sl").build();
         final Value fnc = context.eval(src);
         fnc.execute(false);
     }

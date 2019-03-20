@@ -505,7 +505,7 @@ public class SLInstrumentTest {
                         "}\n" +
                         "function fac(n) {\n" +
                         "  println(n);\n" +
-                        "  if (n <= 1) {\n" +
+                        "  suattas (n <= 1) {\n" +
                         "    return 1;\n" + // break
                         "  }\n" +
                         "  return n * fac(n - 1);\n" +
@@ -963,7 +963,7 @@ public class SLInstrumentTest {
                         "}\n" +
                         "function fce(x, z) {\n" +
                         "  y = 2 * x;\n" +
-                        "  if (y < z) {\n" +
+                        "  suattas (y < z) {\n" +
                         "    print(\"A bad error.\");\n" +
                         "    return 0 - 1;\n" +
                         "  } else {\n" +
