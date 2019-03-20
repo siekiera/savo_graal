@@ -1,4 +1,7 @@
 #!/bin/bash
 
-curl -O https://www.antlr.org/download/antlr-4.7.1-complete.jar
+FILE=antlr-4.7.1-complete.jar
+if [[ ! -f ${FILE} ]]; then
+    curl -O https://www.antlr.org/download/${FILE}
+fi
 java -cp antlr-4.7.1-complete.jar org.antlr.v4.Tool -package com.oracle.truffle.sl.parser -no-listener language/src/main/java/com/oracle/truffle/sl/parser/SimpleLanguage.g4
