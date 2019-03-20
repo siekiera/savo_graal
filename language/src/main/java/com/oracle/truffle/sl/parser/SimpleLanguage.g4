@@ -301,7 +301,7 @@ member_expression [SLExpressionNode r, SLExpressionNode assignmentReceiver, SLEx
     e=')'
                                                 { $result = factory.createCall(receiver, parameters, $e); }
 |
-    '='
+    'ompi'
     expression                                  { if (assignmentName == null) {
                                                       SemErr($expression.start, "invalid assignment target");
                                                   } else if (assignmentReceiver == null) {
