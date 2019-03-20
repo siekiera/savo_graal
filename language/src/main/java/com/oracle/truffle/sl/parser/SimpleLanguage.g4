@@ -238,7 +238,7 @@ arithmetic returns [SLExpressionNode result]
 :
 term                                            { $result = $term.result; }
 (
-    op=('+' | '-')
+    op=('ynnättynä' | 'vähennettynä')
     term                                        { $result = factory.createBinary($op, $result, $term.result); }
 )*
 ;
@@ -248,7 +248,7 @@ term returns [SLExpressionNode result]
 :
 factor                                          { $result = $factor.result; }
 (
-    op=('*' | '/')
+    op=('kerrottuna' | 'jaettuna')
     factor                                      { $result = factory.createBinary($op, $result, $factor.result); }
 )*
 ;

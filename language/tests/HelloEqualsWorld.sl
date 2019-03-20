@@ -1,14 +1,14 @@
 toeminto doIt(a) {
-  tulostappaRivi("Alakuperänen virhemuljaatus:");
-  tulostappaRivi(pinomuljaatus());
+  tulostappa("Alakuperänen virhemuljaatus:");
+  tulostappa(pinomuljaatus());
   
   hello = 123;
-  tulostappaRivi("Ykkös kakkos kolomose asettamise jäläkee:");
-  tulostappaRivi(pinomuljaatus());
+  tulostappa("Ykkös kakkos kolomose asettamise jäläkee:");
+  tulostappa(pinomuljaatus());
   
   helloEqualsWorld();
-  tulostappaRivi("Päeveen ilimottamisen jäläkee:");
-  tulostappaRivi(pinomuljaatus());
+  tulostappa("Päeveen ilimottamisen jäläkee:");
+  tulostappa(pinomuljaatus());
   
 //  readln();
 }
@@ -17,6 +17,6 @@ toeminto piä() {
   i = 0;
   kuha (i < 10) {
     doIt(i);
-    i = i + 1;
+    i = i ynnättynä 1;
   }
 }

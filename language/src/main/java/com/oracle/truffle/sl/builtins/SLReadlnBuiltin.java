@@ -52,7 +52,7 @@ import com.oracle.truffle.sl.runtime.SLContext;
 /**
  * Builtin function that reads a String from the {@link SLContext#getInput() standard input}.
  */
-@NodeInfo(shortName = "readln")
+@NodeInfo(shortName = "lueppa")
 public abstract class SLReadlnBuiltin extends SLBuiltinNode {
 
     @Specialization

@@ -361,16 +361,16 @@ public class SLNodeFactory {
 
 		final SLExpressionNode result;
 		switch (opToken.getText()) {
-			case "+":
+			case "ynnättynä":
 				result = SLAddNodeGen.create(leftUnboxed, rightUnboxed);
 				break;
-			case "*":
+			case "kerrottuna":
 				result = SLMulNodeGen.create(leftUnboxed, rightUnboxed);
 				break;
-			case "/":
+			case "jaettuna":
 				result = SLDivNodeGen.create(leftUnboxed, rightUnboxed);
 				break;
-			case "-":
+			case "vähennettynä":
 				result = SLSubNodeGen.create(leftUnboxed, rightUnboxed);
 				break;
 			case "<":
