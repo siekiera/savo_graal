@@ -64,6 +64,7 @@ import com.oracle.truffle.sl.nodes.controlflow.SLFunctionBodyNode;
 import com.oracle.truffle.sl.nodes.controlflow.SLIfNode;
 import com.oracle.truffle.sl.nodes.controlflow.SLReturnNode;
 import com.oracle.truffle.sl.nodes.controlflow.SLWhileNode;
+import com.oracle.truffle.sl.nodes.controlflow.SavoMaybeNode;
 import com.oracle.truffle.sl.nodes.expression.SLAddNodeGen;
 import com.oracle.truffle.sl.nodes.expression.SLBigIntegerLiteralNode;
 import com.oracle.truffle.sl.nodes.expression.SLDivNodeGen;
@@ -315,6 +316,23 @@ public class SLNodeFactory {
 		final SLIfNode ifNode = new SLIfNode(conditionNode, thenPartNode, elsePartNode);
 		ifNode.setSourceSection(start, end - start);
 		return ifNode;
+	}
+
+	/**
+	 * Returns a {@link SavoMaybeNode} for given parameters
+	 * @param maybeToken the token containing node info
+	 * @param block block to execute
+	 */
+	public SLStatementNode createMaybe(Token maybeToken, SLStatementNode block) {
+		if (block == null) {
+			return null;
+		}
+
+		final int start = maybeToken.getStartIndex();
+		final int end = block.getSourceEndIndex();
+		final SavoMaybeNode node = new SavoMaybeNode(block);
+		node.setSourceSection(start, end);
+		return node;
 	}
 
 	/**

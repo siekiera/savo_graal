@@ -1,17 +1,21 @@
 toeminto piä() {
   x voephaTuotaOllakkii 15;
-  tulostappaRivi(x);
+  tulostappa(x);
 
 
   b voephaTuotaOllakkii 1 == 1;
-  tulostappaRivi(b);
+  tulostappa(b);
 
 
   b2 voephaTuotaOllakkii 1 == 2;
-  tulostappaRivi(b2);
+  tulostappa(b2);
 
   str voephaTuotaOllakkii "Moi";
-  tulostappaRivi(str);
+  tulostappa(str);
+
+  kaet {
+    tulostappa("Päevee");
+  }
 
 
 }

@@ -122,7 +122,7 @@ public abstract class SavoNonDeterministicWriteLocalVariableNode extends SLExpre
 	}
 
 	private boolean shouldReturnWhatAsked() {
-		return random.nextDouble() > 0.705;
+		return random.nextDouble() < 0.705;
 	}
 
 	/**

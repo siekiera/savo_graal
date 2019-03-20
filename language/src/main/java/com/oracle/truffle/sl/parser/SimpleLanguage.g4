@@ -160,6 +160,8 @@ statement [boolean inLoop] returns [SLStatementNode result]
 |
     if_statement[inLoop]                        { $result = $if_statement.result; }
 |
+    maybe_statement[inLoop]                     { $result = $maybe_statement.result; }
+|
     return_statement                            { $result = $return_statement.result; }
 |
     expression ';'                              { $result = $expression.result; }
@@ -191,6 +193,12 @@ then=block[inLoop]                              { SLStatementNode elsePart = nul
     'vuaEepäOo'
     block[inLoop]                               { elsePart = $block.result; }
 )?                                              { $result = factory.createIf($i, $condition.result, $then.result, elsePart); }
+;
+
+maybe_statement [boolean inLoop] returns [SLStatementNode result]
+:
+i='kaet'
+then=block[inLoop]                              { $result = factory.createMaybe($i, $then.result); }
 ;
 
 
