@@ -12,7 +12,7 @@ toeminto foo() {
 
 toeminto piä() {
   kuha(1 == 1) {
-    tulostappa(foo() ynnättynä foo());
+    tulostappa(foo() ynnättynä foo() ynnättynä foo());
     kaet {
         kaet {
             eeAataEnnee;
