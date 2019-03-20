@@ -219,14 +219,14 @@ public final class SLLanguage extends TruffleLanguage<SLContext> {
         } else {
             Source requestedSource = request.getSource();
             StringBuilder sb = new StringBuilder();
-            sb.append("function piä(");
+            sb.append("toeminto piä(");
             String sep = "";
             for (String argumentName : request.getArgumentNames()) {
                 sb.append(sep);
                 sb.append(argumentName);
                 sep = ",";
             }
-            sb.append(") { return ");
+            sb.append(") { pallaata ");
             sb.append(request.getSource().getCharacters());
             sb.append(";}");
             String language = requestedSource.getLanguage() == null ? ID : requestedSource.getLanguage();
