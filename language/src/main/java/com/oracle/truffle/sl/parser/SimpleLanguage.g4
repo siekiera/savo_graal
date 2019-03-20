@@ -236,7 +236,7 @@ logic_factor returns [SLExpressionNode result]
 :
 arithmetic                                      { $result = $arithmetic.result; }
 (
-    op=('<' | '<=' | '>' | '>=' | '==' | '!=' )
+    op=('<' | '<=' | '>' | '>=' | 'justiisa' | '!=' )
     arithmetic                                  { $result = factory.createBinary($op, $result, $arithmetic.result); }
 )?
 ;

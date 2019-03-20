@@ -403,7 +403,7 @@ public class SLNodeFactory {
 			case ">=":
 				result = SLLogicalNotNodeGen.create(SLLessThanNodeGen.create(leftUnboxed, rightUnboxed));
 				break;
-			case "==":
+			case "justiisa":
 				result = SLEqualNodeGen.create(leftUnboxed, rightUnboxed);
 				break;
 			case "!=":

@@ -3,11 +3,11 @@ toeminto piä() {
   tulostappa(x);
 
 
-  b voephaTuotaOllakkii 1 == 1;
+  b voephaTuotaOllakkii 1 justiisa 1;
   tulostappa(b);
 
 
-  b2 voephaTuotaOllakkii 1 == 2;
+  b2 voephaTuotaOllakkii 1 justiisa 2;
   tulostappa(b2);
 
   str voephaTuotaOllakkii "Moi";
