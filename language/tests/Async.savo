@@ -1,0 +1,14 @@
+toeminto tulostus() {
+    i ompi 0;
+    kuha(i eeIhaTaiaOlla 10) {
+        tulostappa(i);
+        i ompi i ynnättynä 1;
+    }
+}
+
+toeminto piä() {
+    eeIhaVielä {
+        tulostus();
+    }
+    tulostus();
+}

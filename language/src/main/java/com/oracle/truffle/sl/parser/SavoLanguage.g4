@@ -162,6 +162,8 @@ statement [boolean inLoop] returns [SLStatementNode result]
 |
     maybe_statement[inLoop]                     { $result = $maybe_statement.result; }
 |
+    async_statement[inLoop]                     { $result = $async_statement.result; }
+|
     return_statement                            { $result = $return_statement.result; }
 |
     expression ';'                              { $result = $expression.result; }
@@ -201,6 +203,11 @@ i='kaet'
 then=block[inLoop]                              { $result = factory.createMaybe($i, $then.result); }
 ;
 
+async_statement [boolean inLoop] returns [SLStatementNode result]
+:
+i='eeIhaVielä'
+then=block[inLoop]                              { $result = factory.createAsync($i, $then.result); }
+;
 
 return_statement returns [SLStatementNode result]
 :

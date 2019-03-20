@@ -64,6 +64,7 @@ import com.oracle.truffle.sl.nodes.controlflow.SLFunctionBodyNode;
 import com.oracle.truffle.sl.nodes.controlflow.SLIfNode;
 import com.oracle.truffle.sl.nodes.controlflow.SLReturnNode;
 import com.oracle.truffle.sl.nodes.controlflow.SLWhileNode;
+import com.oracle.truffle.sl.nodes.controlflow.SavoAsyncNode;
 import com.oracle.truffle.sl.nodes.controlflow.SavoMaybeNode;
 import com.oracle.truffle.sl.nodes.expression.SLAddNodeGen;
 import com.oracle.truffle.sl.nodes.expression.SLBigIntegerLiteralNode;
@@ -320,8 +321,9 @@ public class SLNodeFactory {
 
 	/**
 	 * Returns a {@link SavoMaybeNode} for given parameters
+	 *
 	 * @param maybeToken the token containing node info
-	 * @param block block to execute
+	 * @param block      block to execute
 	 */
 	public SLStatementNode createMaybe(Token maybeToken, SLStatementNode block) {
 		if (block == null) {
@@ -331,6 +333,24 @@ public class SLNodeFactory {
 		final int start = maybeToken.getStartIndex();
 		final int end = block.getSourceEndIndex();
 		final SavoMaybeNode node = new SavoMaybeNode(block);
+		node.setSourceSection(start, end);
+		return node;
+	}
+
+	/**
+	 * Returns a {@link SavoAsyncNode} for given parameters
+	 *
+	 * @param asyncToken the token containing node info
+	 * @param block      block to execute
+	 */
+	public SLStatementNode createAsync(Token asyncToken, SLStatementNode block) {
+		if (block == null) {
+			return null;
+		}
+
+		final int start = asyncToken.getStartIndex();
+		final int end = block.getSourceEndIndex();
+		final SavoAsyncNode node = new SavoAsyncNode(block);
 		node.setSourceSection(start, end);
 		return node;
 	}
