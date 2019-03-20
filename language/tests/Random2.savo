@@ -1,0 +1,24 @@
+toeminto foo() {
+  x voephaTuotaOllakkii 5;
+  suattasOlla(x < 4) {
+    kaet {
+        pallaata "Hei";
+    }
+  }
+  pallaata x;
+
+}
+
+
+toeminto piä() {
+  kuha(1 == 1) {
+    tulostappa(foo() ynnättynä foo());
+    kaet {
+        kaet {
+            eeAataEnnee;
+        }
+    }
+  }
+
+
+}
