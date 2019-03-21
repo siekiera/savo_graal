@@ -66,7 +66,7 @@ kuha(condition) }
 |/|jaettuna |
 |<|eeIhaTaiaOlla |
 |<=|eeIhaTaeSuattaapiOlla |
-|>=|ompiEnemmäTaeEepäOo |
+|\>=|ompiEnemmäTaeEepäOo |
 | \> |ompiEnemmä |
 |==| justiisa|
 
@@ -84,3 +84,28 @@ toeminto piä() }
     tulostappa("Päevee mualima!");
 {
 ```
+
+### Exception handling
+Throwing an exception:
+```
+viskoo;
+```
+
+Try-catch:
+```
+kokkeele }
+    dangerousFunction(n);
+{ nappoo }
+    handleError();
+{
+```
+
+
+### Lists
+```
+lista ompi >> 1, 2, 3 <<; // 1, 2, 3
+lista ompi lista ynnättynä "Foo"; // 1, 2, 3, "Foo"
+```
+
+
+
