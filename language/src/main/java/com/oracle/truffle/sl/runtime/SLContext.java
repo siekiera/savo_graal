@@ -78,6 +78,8 @@ import com.oracle.truffle.sl.builtins.SLNanoTimeBuiltinFactory;
 import com.oracle.truffle.sl.builtins.SLNewObjectBuiltinFactory;
 import com.oracle.truffle.sl.builtins.SLPrintlnBuiltin;
 import com.oracle.truffle.sl.builtins.SLPrintlnBuiltinFactory;
+import com.oracle.truffle.sl.builtins.SLReadNumberBuiltin;
+import com.oracle.truffle.sl.builtins.SLReadNumberBuiltinFactory;
 import com.oracle.truffle.sl.builtins.SLReadlnBuiltin;
 import com.oracle.truffle.sl.builtins.SLReadlnBuiltinFactory;
 import com.oracle.truffle.sl.builtins.SLStackTraceBuiltinFactory;
@@ -168,6 +170,7 @@ public final class SLContext {
         installBuiltin(SLIsExecutableBuiltinFactory.getInstance());
         installBuiltin(SLIsNullBuiltinFactory.getInstance());
         installBuiltin(FilterBuiltInNodeFactory.getInstance());
+        installBuiltin(SLReadNumberBuiltinFactory.getInstance());
     }
 
     public void installBuiltin(NodeFactory<? extends SLBuiltinNode> factory) {

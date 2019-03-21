@@ -102,6 +102,13 @@ public abstract class SLAddNode extends SLBinaryNode {
         return new SLBigNumber(left.getValue().add(right.getValue()));
     }
 
+    /**
+     * Adds element into  {@link SavoList}.
+     *
+     * @param savoList
+     * @param right
+     * @return
+     */
     @Specialization
     @TruffleBoundary
     protected SavoList add(SavoList savoList, Object right) {

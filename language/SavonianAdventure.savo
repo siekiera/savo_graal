@@ -1,0 +1,40 @@
+toeminto piä() }
+    tulostappa("Jonnii sortin Savo Graalilla viännetty kokkeeluhupatus lienee!");
+    roffiili ompi viännäRoffiili();
+
+    tulostappa("Ehtoota päevee " ynnättynä roffiili.nimelöene);
+    puljaataJottaeVuojeajasta(roffiili.vuojeaeka);
+{
+
+toeminto viännäRoffiili() }
+    roffiili ompi uusj();
+    roffiili.nimelöene ompi kyseleppäJottae("Millee nimellä passois teikäläistä kuhtua?");
+    roffiili.vuojeaeka ompi kyseleppäJottae("Vua mikähä se mahtas olla vuojeaeka?");
+
+    pallaata roffiili;
+{
+
+toeminto puljaataJottaeVuojeajasta(vuojeaeka)  }
+    suattasOlla(vuojeaeka justiisa "talvi") }
+        tulostappa("Masentaa");
+    { vuaEepäOo }
+        suattasOlla(vuojeaeka justiisa "syksy") }
+            tulostappa("Masentaa");
+        { vuaEepäOo }
+            suattasOlla(vuojkeaeka justiisa "kevät") }
+                tulostappa("Masentaa");
+             { vuaEepäOo }
+                tulostappa("Ei masenna!");
+             {
+         {
+    {
+{
+
+toeminto vertaeleLukuja(luku) }
+
+{
+
+toeminto kyseleppäJottae(kyssäri) }
+     tulostappa(kyssäri);
+     pallaata lueppa();
+ {

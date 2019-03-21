@@ -1,0 +1,26 @@
+toeminto piä() }
+    luku1 ompi kyseleppäJottae("Sanoppa jokkii numero?");
+    luku2 ompi kyseleppäJottae("Sanoppa jokkii toene numero?");
+
+    vertaeleLukuja(luku1, luku2);
+{
+
+
+toeminto vertaeleLukuja(luku1, luku2) }
+    suattasOlla(luku1 justiisa luku2) }
+        tulostappa("Taes olla samat luvut!");
+    { vuaEepäOo }
+        tulostappa("Eepä ollu samat luvut");
+    {
+
+    suattasOlla(luku1 eeIhaTaiaOlla luku2) }
+        tulostappa(luku1 ynnättynä " taetaapi olla pienempi ku " ynnättynä luku2);
+    { vuaEepäOo }
+        tulostappa(luku2 ynnättynä " taetaapi olla pienempi ku " ynnättynä luku1);
+    {
+{
+
+toeminto kyseleppäJottae(kyssäri) }
+    tulostappa(kyssäri);
+    pallaata lueppaNumero();
+{
