@@ -2,6 +2,10 @@ toeminto moi() }
     pallaata "Moi";
 {
 
+toeminto onkoKaks(x) }
+    pallaata (x justiisa 2);
+{
+
 toeminto piä() }
     lista ompi >> 1, >>2, 3<<, 3 <<;
     tulostappa(lista);
@@ -14,5 +18,10 @@ toeminto piä() }
 
     lista ynnättynä 5;
     tulostappa(lista);
+
+    lista ompi >> 1, 2, 2, 3 <<;
+    tulostappa(laestappa(lista, onkoKaks));
+
+    tulostappa(laestappa(lista, moi));
 
 {

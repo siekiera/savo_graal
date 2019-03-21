@@ -63,6 +63,8 @@ import com.oracle.truffle.api.object.Layout;
 import com.oracle.truffle.api.object.Shape;
 import com.oracle.truffle.api.source.Source;
 import com.oracle.truffle.sl.SavoLanguage;
+import com.oracle.truffle.sl.builtins.FilterBuiltInNode;
+import com.oracle.truffle.sl.builtins.FilterBuiltInNodeFactory;
 import com.oracle.truffle.sl.builtins.SLBuiltinNode;
 import com.oracle.truffle.sl.builtins.SLDefineFunctionBuiltinFactory;
 import com.oracle.truffle.sl.builtins.SLEvalBuiltinFactory;
@@ -165,6 +167,7 @@ public final class SLContext {
         installBuiltin(SLHasSizeBuiltinFactory.getInstance());
         installBuiltin(SLIsExecutableBuiltinFactory.getInstance());
         installBuiltin(SLIsNullBuiltinFactory.getInstance());
+        installBuiltin(FilterBuiltInNodeFactory.getInstance());
     }
 
     public void installBuiltin(NodeFactory<? extends SLBuiltinNode> factory) {
