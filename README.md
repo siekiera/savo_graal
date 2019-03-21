@@ -107,5 +107,15 @@ lista ompi >> 1, 2, 3 <<; // 1, 2, 3
 lista ompi lista ynnättynä "Foo"; // 1, 2, 3, "Foo"
 ```
 
+### Built-in functions
+|Function|Description|
+|---|---|
+|`tulostappa(<object>)` |prints to stdout |
+|`lueppa()` |reads from stdin |
+|`pinomuljaatus()` |print stack trace |
+|`laestappa(<list>, <function>)` |filter a list by a given predicate function |
+|`uusj()` |new key-value object|
+
+
 
 
