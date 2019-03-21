@@ -3,10 +3,16 @@ toeminto moi() }
 {
 
 toeminto piä() }
-    lista ompi >> 1, 2, 3 <<;
+    lista ompi >> 1, >>2, 3<<, 3 <<;
     tulostappa(lista);
 
 
     lista ompi >> moi(), (moi() ynnättynä 2) <<;
+
+
     tulostappa(lista);
+
+    lista ynnättynä 5;
+    tulostappa(lista);
+
 {

@@ -4,10 +4,14 @@ An implementation of savolang using Truffle for the GraalVM.
 
 Savolang is a programming language with syntax based on the [Savonian dialects of Finnish language.](https://en.wikipedia.org/wiki/Savonian_dialects)
 
-Implementation forked from SimpleLanguage example.
+Implementation forked from [SimpleLanguage example](https://github.com/graalvm/simplelanguage).
 
 This repository is licensed under the permissive UPL licence. Fork it to begin
-your own Truffle language. [GraalVM website](http://www.graalvm.org/docs/graalvm-as-a-platform/implement-language/)
+your own Truffle language. 
+
+[GraalVM website](http://www.graalvm.org/docs/graalvm-as-a-platform/implement-language/)
+
+[Truffle GitHub](https://github.com/oracle/graal/tree/master/truffle)
 
 # Syntax
 

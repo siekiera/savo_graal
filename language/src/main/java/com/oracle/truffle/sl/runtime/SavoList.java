@@ -16,6 +16,11 @@ public class SavoList {
 		this.values = values;
 	}
 
+	public SavoList add(Object value) {
+		values.add(value);
+
+		return this;
+	}
 
 	@Override
 	public String toString() {

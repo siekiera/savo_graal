@@ -1,5 +1,5 @@
 toeminto e(a, b) {
-  return a == b;
+  pallaata a justiisa b;
 }
 
 toeminto piä() {
