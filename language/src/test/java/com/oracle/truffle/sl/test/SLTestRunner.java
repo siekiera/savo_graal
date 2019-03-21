@@ -49,6 +49,7 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
@@ -85,7 +86,7 @@ import com.oracle.truffle.sl.test.SLTestRunner.TestCase;
 
 public class SLTestRunner extends ParentRunner<TestCase> {
 
-    private static final String SOURCE_SUFFIX = ".sl";
+    private static final String SOURCE_SUFFIX = ".savo";
     private static final String INPUT_SUFFIX = ".input";
     private static final String OUTPUT_SUFFIX = ".output";
 
@@ -163,7 +164,9 @@ public class SLTestRunner extends ParentRunner<TestCase> {
             @Override
             public FileVisitResult visitFile(Path sourceFile, BasicFileAttributes attrs) throws IOException {
                 String sourceName = sourceFile.getFileName().toString();
-                if (sourceName.endsWith(SOURCE_SUFFIX)) {
+                if (sourceName.endsWith(SOURCE_SUFFIX)
+                        // Ignore the tests in "random" folder, as they are non-deterministic
+                        && !(sourceFile.toString().contains("random"))                ) {
                     String baseName = sourceName.substring(0, sourceName.length() - SOURCE_SUFFIX.length());
 
                     Path inputFile = sourceFile.resolveSibling(baseName + INPUT_SUFFIX);
@@ -269,7 +272,7 @@ public class SLTestRunner extends ParentRunner<TestCase> {
     private static String readAllLines(Path file) throws IOException {
         // fix line feeds for non unix os
         StringBuilder outFile = new StringBuilder();
-        for (String line : Files.readAllLines(file, Charset.defaultCharset())) {
+        for (String line : Files.readAllLines(file, StandardCharsets.UTF_8)) {
             outFile.append(line).append(LF);
         }
         return outFile.toString();
