@@ -58,17 +58,17 @@ kuha(condition) }
 
 ### Operators
 
-|Operation|Keyword|
-|---|---|
-|+ |ynnättynä |
-|-| vähennettynä|
-|*|kerrottuna |
-|/|jaettuna |
-|<|eeIhaTaiaOlla |
-|<=|eeIhaTaeSuattaapiOlla |
-|\>=|ompiEnemmäTaeEepäOo |
-| \> |ompiEnemmä |
-|==| justiisa|
+|Operation|Keyword|Accepted types|
+|---|---|---|
+|+ |ynnättynä |number (addition), list (adds to list), any object (string concatenation)
+|-| vähennettynä|number|
+|*|kerrottuna |number|
+|/|jaettuna |number|
+|<|eeIhaTaiaOlla |number|
+|<=|eeIhaTaeSuattaapiOlla |number|
+|\>=|ompiEnemmäTaeEepäOo |number|
+| \> |ompiEnemmä |number|
+|==| justiisa|any|
 
 ### Function declaration
 
