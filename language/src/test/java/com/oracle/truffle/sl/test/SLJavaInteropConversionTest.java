@@ -99,12 +99,12 @@ public class SLJavaInteropConversionTest {
 
     @Test
     public void testGR7318Object() throws Exception {
-        String sourceText = "function test(validator) {\n" +
-                        "  obj = new();\n" +
-                        "  obj.a = new();\n" +
-                        "  obj.b = new();\n" +
-                        "  return validator.validateObject(obj, obj);\n" +
-                        "}";
+        String sourceText = "toeminto test(validator) }\n" +
+                        "  obj ompi uusj();\n" +
+                        "  obj.a ompi uusj();\n" +
+                        "  obj.b ompi uusj();\n" +
+                        "  pallaata validator.validateObject(obj, obj);\n" +
+                        "{";
         try (Context context = Context.newBuilder(SavoLanguage.ID).build()) {
             context.eval(Source.newBuilder(SavoLanguage.ID, sourceText, "Test").build());
             Value test = context.getBindings(SavoLanguage.ID).getMember("test");
@@ -115,12 +115,12 @@ public class SLJavaInteropConversionTest {
 
     @Test
     public void testGR7318Map() throws Exception {
-        String sourceText = "function test(validator) {\n" +
-                        "  obj = new();\n" +
-                        "  obj.a = new();\n" +
-                        "  obj.b = new();\n" +
-                        "  return validator.validateMap(obj, obj);\n" +
-                        "}";
+        String sourceText = "toeminto test(validator) }\n" +
+                        "  obj ompi uusj();\n" +
+                        "  obj.a ompi uusj();\n" +
+                        "  obj.b ompi uusj();\n" +
+                        "  pallaata validator.validateMap(obj, obj);\n" +
+                        "{";
         try (Context context = Context.newBuilder(SavoLanguage.ID).build()) {
             context.eval(Source.newBuilder(SavoLanguage.ID, sourceText, "Test").build());
             Value test = context.getBindings(SavoLanguage.ID).getMember("test");
@@ -131,11 +131,11 @@ public class SLJavaInteropConversionTest {
 
     @Test
     public void testGR7318List() throws Exception {
-        String sourceText = "function test(validator, array) {\n" +
-                        "  array[0] = new();\n" +
-                        "  array[1] = new();\n" +
-                        "  return validator.validateList(array, array);\n" +
-                        "}";
+        String sourceText = "toeminto test(validator, array) }\n" +
+                        "  array[0] ompi uusj();\n" +
+                        "  array[1] ompi uusj();\n" +
+                        "  pallaata validator.validateList(array, array);\n" +
+                        "{";
         try (Context context = Context.newBuilder(SavoLanguage.ID).build()) {
             context.eval(Source.newBuilder(SavoLanguage.ID, sourceText, "Test").build());
             Value test = context.getBindings(SavoLanguage.ID).getMember("test");
