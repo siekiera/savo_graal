@@ -299,6 +299,16 @@ factor returns [SLExpressionNode result]
     s='('
     expr=expression
     e=')'                                       { $result = factory.createParenExpression($expr.result, $s.getStartIndex(), $e.getStopIndex() - $s.getStartIndex() + 1); }
+|
+    s='>>'                                  { List<SLExpressionNode> expressions = new ArrayList<>(); }
+    (
+        expression                              { expressions.add($expression.result); }
+        (
+            ','
+            expression                          { expressions.add($expression.result); }
+        )*
+    )?
+    e='<<'                                    { $result = factory.createListInit($s, expressions, $e); }
 )
 ;
 

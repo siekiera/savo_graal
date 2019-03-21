@@ -84,6 +84,7 @@ import com.oracle.truffle.sl.nodes.expression.SLParenExpressionNode;
 import com.oracle.truffle.sl.nodes.expression.SLStringLiteralNode;
 import com.oracle.truffle.sl.nodes.expression.SLSubNodeGen;
 import com.oracle.truffle.sl.nodes.expression.SLUnboxNodeGen;
+import com.oracle.truffle.sl.nodes.expression.SavoListInitNode;
 import com.oracle.truffle.sl.nodes.local.SLReadArgumentNode;
 import com.oracle.truffle.sl.nodes.local.SLReadLocalVariableNode;
 import com.oracle.truffle.sl.nodes.local.SLReadLocalVariableNodeGen;
@@ -592,6 +593,21 @@ public class SLNodeFactory {
 
 		final SLParenExpressionNode result = new SLParenExpressionNode(expressionNode);
 		result.setSourceSection(start, length);
+		return result;
+	}
+
+	public SLExpressionNode createListInit(Token startToken, List<SLExpressionNode> expressionNodes, Token endToken) {
+		if (containsNull(expressionNodes)) {
+			return null;
+		}
+
+
+		final SLExpressionNode result = new SavoListInitNode(expressionNodes);
+
+		final int startPos = startToken.getStartIndex();
+		final int endPos = endToken.getStartIndex() + endToken.getText().length();
+		result.setSourceSection(startPos, endPos - startPos);
+
 		return result;
 	}
 

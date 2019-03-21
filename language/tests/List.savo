@@ -1,0 +1,12 @@
+toeminto moi() }
+    pallaata "Moi";
+{
+
+toeminto piä() }
+    lista ompi >> 1, 2, 3 <<;
+    tulostappa(lista);
+
+
+    lista ompi >> moi(), (moi() ynnättynä 2) <<;
+    tulostappa(lista);
+{
